@@ -79,6 +79,36 @@
             border: 1px solid blue;
             padding: 20px;
         }
+
+        /* Pseudo-class Selector */
+        /* rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi */
+        a:link {
+            color: red;
+        }
+
+        /* rule akan diterapkan pada sebuah tautan yang sudah pernah dikunjungi */
+        a:visited {
+            color: green;
+        }
+
+        /* rule akan diterapkan pada sebuah tautan ketika diarahkan dengan kursor */
+        a:hover {
+            color: pink;
+        }
+
+        /* rule akan diterapkan pada sebuah tautan ketika ditekan */
+        a:active {
+            color: orange;
+        }
+
+        /* Pseudo-elemen Selector */
+        blockquote::before,
+        blockquote::after {
+            content: '"';
+            font-size: 24px;
+            font-style: italic;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -116,29 +146,35 @@
     </ul>
 
 
-    
+
     <p>
-        Ini merupakan paragraf biasa atau tidak menerapkan atribut apapun. Maka teks pada paragraf ini akan berwarna hijau
-      </p>
-      <p lang="en-us">
+        Ini merupakan paragraf biasa atau tidak menerapkan atribut apapun. Maka teks pada paragraf ini akan berwarna
+        hijau
+    </p>
+    <p lang="en-us">
         This is an English paragraph contains en-us value of lang attribute, so this text will be green and
         italic.
-      </p>
-      
-      <h1>Ini merupakan sebuah header biasa</h1>
-      <h1 lang="en-us">This is an English Header</h1>
-      
-      <p class="warning">
+    </p>
+
+    <h1>Ini merupakan sebuah header biasa</h1>
+    <h1 lang="en-us">This is an English Header</h1>
+
+    <p class="warning">
         Perhatikan paragraf ini! Paragraf ini merupakan paragraf yang memiliki kelas bernilai warning,
         sehingga teks dari paragraf ini akan berwarna merah
-      </p>
-      
-      <div id="content">
+    </p>
+
+    <div id="content">
         <p>
-          Ini merupakan sebuah teks di dalam sebuah div yang memiliki id bernilai "content", seharusnya paragraf ini
-          dibungkus dalam border yang memiliki padding 20px
+            Ini merupakan sebuah teks di dalam sebuah div yang memiliki id bernilai "content", seharusnya paragraf ini
+            dibungkus dalam border yang memiliki padding 20px
         </p>
-      </div>
+    </div>
+
+
+    <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius error explicabo ipsum molestiae
+        necessitatibus nesciunt possimus reprehenderit sed voluptates. Aliquam aspernatur autem est nobis officia
+        praesentium quas recusandae rem.</blockquote>
 </body>
 
 </html>
