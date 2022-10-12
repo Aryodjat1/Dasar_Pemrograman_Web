@@ -40,3 +40,4 @@ const calculator = {
       updateDisplay();
     });
   }
+  
