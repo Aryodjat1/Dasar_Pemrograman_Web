@@ -168,23 +168,20 @@
 	grid-template-columns: 1fr 1fr;
 	align-tracks: center;
 	justify-self: center;
-	margin: 0 auto;
+	margin: 0 auto 20px auto;
 	height: 90vh;
 	background-color: #F9F7F7;
 	z-index: 1;
 	width: 100%;
 	max-width: 1300px;
-	padding: 100px 50px;
+	padding: 100px 50px 50px 50px;
 }
 
 .main__container h1{
 	font-size: 4rem;
 	background-color: #112D4E;	
 	background-size: 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-moz-text-fill-color:transparent;
+	-webkit-background-clip: text;			
 }
 
 .main__container h2 {
@@ -192,12 +189,10 @@
 	background-color: #3F72AF;	
 	background-size: 100%;
 	-webkit-background-clip: text;
-	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	-moz-text-fill-color:transparent;
 }
 
-.main__content p {
+.main__container p {
 	margin-top: 50px;
 	font-size: 2rem;
 	font-weight: 700;;
@@ -237,7 +232,7 @@
 }
 
 .main__btn:hover {
-	color: #fff;	
+	background: #112D4E;	
 }
 
 .main_btn:hover::after{
@@ -303,65 +298,126 @@
 }
 
 /* About Me */
-aside {
-	background-color: #F9F7F7;
-	padding: 0;
-	display: flex;
-	align-items: center;
-}
-
-.about__container {
+.about__container {	
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 5fr 5fr;
 	align-tracks: center;
 	justify-self: center;
-	margin: 0 auto;
-	height: 90vh;
+	margin: 0 auto 20px auto;
+	height: auto;
 	background-color: #F9F7F7;
 	z-index: 1;
 	width: 100%;
 	max-width: 1300px;
-	padding: 50px 50px;
+	padding: 100px 50px 50px 50px;
 }
 
-.about__content p {
+.about__container h1{
+	
+	font-size: 4rem;
+	background-color: #112D4E;	
+	background-size: 100%;
+	-webkit-background-clip: text;		
+}
+
+.about__container h2 {
+	font-size: 4rem;
+	background-color: #3F72AF;	
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.main__container p {
 	margin-top: 50px;
 	font-size: 2rem;
-	font-weight: 700;;
-	font-family: 'Slabo 27px', serif;
-}
-.main__img-container {
-	text-align: center;
+	font-weight: 700;;	
 }
 
-#main__img {
-	height: 80%;
-	width: 80%;
+.about__container .card{	
+	position: relative;
+	max-width: 300px;
+	height: 250px;
+	background: #fff;	
+	margin: 10px 150px auto 150px;
+	padding: 20px 20px;
+	display: flex;
+	flex-direction: column;
+	/* box-shadow */
+	transition: 0.3s ease-in-out;		
+}
+
+.about__container .card:hover {
+	height: 480px;
+}
+
+.about__container .card .imgBx {
+	position: relative;
+	width: 260px;
+	height: 260px;
+	top: -60px;	
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
+}
+
+.about__container .card .imgBx img{
+	max-width: 100%;
+	border-radius: 4px;
+}
+
+.about__container .card .content{
+	position: relative;
+	margin-top: -140px;
+	padding: 10px 15px;
+	text-align: center;
+	color: #111;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+}
+
+.about__container .card:hover .content{
+	visibility: visible;
+	opacity: 1;
+	margin-top: -40px;
 }
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
-	.main__container {
+	.about__container {
 		display: grid;
 		grid-template-columns: auto;
 		align-items: center;
 		justify-self: center;
 		width: 100%;
-		margin: 0 auto;
-		height: 90vh;
+		margin: 10px auto;
+		height: auto;
 	}
 
-	.main__content {
+	.about__container .card{
+		position: relative;
+		max-width: 300px;
+		height: 250px;
+		background: #fff;	
+		margin: auto ;
+		padding: 10px a;
+		display: flex;
+		flex-direction: column;
+		/* box-shadow */
+		transition: 0.3s ease-in-out;
+		align-items: center;
+	}
+
+	.about__content {
 		text-align: center;
 		margin-bottom: 4rem;
 	}
 
-	.main__content h1{
+	.about__content h1{
 		font-size: 2.5rem;
 		margin-top: 2rem;
 	}
 
-	.main__content h2 {
+	.about__content h2 {
 		font-size: 3rem;		
 	}
 
@@ -369,23 +425,36 @@ aside {
 		margin-top: 1rem;
 		font-size: 1.5rem;
 	}
+
+
 }
 
 @media screen and (max-width: 480px) {
-	.main__content h1 {
-		font-size: 2rem;
-		margin-top: 3rem;
+	.about__container {
+		display: grid;
+		grid-template-columns: auto;
+		align-items: center;
+		justify-self: center;
+		width: 100%;
+		margin: 10px auto;
+		height: auto;
 	}
 
-	.main__content p {
-		margin-top: 2rem;
-		font-size: 1.5rem;
+	.about__container .card{
+		position: relative;
+		max-width: 300px;
+		height: 250px;
+		background: #fff;	
+		margin: auto ;
+		padding: 10px a;
+		display: flex;
+		flex-direction: column;
+		/* box-shadow */
+		transition: 0.3s ease-in-out;
+		align-items: center;
 	}
 
-	.main__btn {
-		padding: 12px 36px;
-		margin: 2.5rem 0;
-	}
+	
 }
 
 
@@ -464,8 +533,4 @@ footer {
 	opacity: .4;
 	font-weight: 200;
 	align-items: center;
-}
-
-.icon {
-	fill: #fff;
 }
