@@ -353,7 +353,7 @@
 	height: 480px;
 }
 
-.about__container .card .imgBx {
+.about__container .card .image__box {
 	position: relative;
 	width: 260px;
 	height: 260px;
@@ -361,7 +361,7 @@
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
 }
 
-.about__container .card .imgBx img{
+.about__container .card .image__box img{
 	max-width: 100%;
 	border-radius: 4px;
 }
